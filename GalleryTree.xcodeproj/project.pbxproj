@@ -30,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		1983049F5C435394438DE089 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		55FA7B181AFB0A1400C3B7A0 /* GalleryTree-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GalleryTree-Bridging-Header.h"; sourceTree = "<group>"; };
 		69D271815C448E57CD844F66 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DB639827DFC2EC797B211CBC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9CA1A91AFAFF9000D56B68 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 				FEB3B9D91AFAF1A200A23017 /* Supporting Files */,
 				FE9CA1A91AFAFF9000D56B68 /* Secrets.swift */,
 				FE9CA1AB1AFB05E400D56B68 /* PhotoTableViewCell.swift */,
+				55FA7B181AFB0A1400C3B7A0 /* GalleryTree-Bridging-Header.h */,
 			);
 			path = GalleryTree;
 			sourceTree = "<group>";
@@ -408,9 +410,11 @@
 			baseConfigurationReference = 1983049F5C435394438DE089 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = GalleryTree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GalleryTree/GalleryTree-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -419,9 +423,11 @@
 			baseConfigurationReference = 69D271815C448E57CD844F66 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = GalleryTree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GalleryTree/GalleryTree-Bridging-Header.h";
 			};
 			name = Release;
 		};
