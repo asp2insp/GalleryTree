@@ -18,8 +18,11 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CTZ-Ly-k1G" id="5Ut-Gt-PtX">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-Tl-cJQ">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-Tl-cJQ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="306" id="eHt-ao-KDc"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
