@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import Alamofire
 
-class ViewController: UIViewController {
+class PhotosViewController: UIViewController {
 
+    var feed: [String: NSDictionary] = [:]
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         NSLog("KEY: \(API_KEY), SECRET: \(API_SECRET)")
+      
+        Alamofire.request(.GET, "https://api.instagram.com/v1/media/popular?client_id=\(API_KEY)")
+            .responseJSON { (_, _, JSON, _) in
+                if (JSON != nil) {
+                    self.feed = JSON as! [String: NSDictionary]
+                }
+        }
     }
 
     override func didReceiveMemoryWarning() {
